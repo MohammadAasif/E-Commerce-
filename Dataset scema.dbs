@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MongoDb" id="Project_1f22" database="MongoDb" >
+	<schema name="E_Commercedb" >
+		<table name="Carts_0" >
+			<column name="Product_Qty" type="int" length="800" decimal="0" jt="4" />
+			<column name="Sell_Price" type="int" length="800" decimal="0" jt="4" />
+			<column name="Product" type="string" length="800" decimal="0" jt="12" />
+			<column name="Base_Price" type="int" length="800" decimal="0" jt="4" />
+			<column name="Users" type="string" length="800" decimal="0" jt="12" />
+			<column name="Total_Price" type="int" length="800" decimal="0" jt="4" />
+		</table>
+		<table name="Categories_0" >
+			<column name="Description" type="string" length="800" decimal="0" jt="12" />
+			<column name="Slug" type="string" length="800" decimal="0" jt="12" />
+			<column name="Image" type="string" length="800" decimal="0" jt="12" />
+			<column name="Name" type="string" length="800" decimal="0" jt="12" />
+		</table>
+		<table name="Orders_0" >
+			<column name="Product" prior="Products" type="string" jt="12" />
+			<column name="Payment Status" type="string" length="800" decimal="0" jt="12" />
+			<column name="Total items" type="int" length="800" decimal="0" jt="4" />
+			<column name="Billing Address" type="string" length="800" decimal="0" jt="12" />
+			<column name="Transaction Status" type="bool" length="800" decimal="0" jt="16" />
+			<column name="Users id" type="int" length="800" decimal="0" jt="4" />
+			<column name="Shipping Address" type="string" length="800" decimal="0" jt="12" />
+			<column name="Order Status" type="string" length="800" decimal="0" jt="12" />
+			<column name="Payment Mode" type="string" length="800" decimal="0" jt="12" />
+		</table>
+		<table name="Product_0" >
+			<column name="Product Gallery" type="string" length="800" decimal="0" jt="12" />
+			<column name="Description" type="string" length="800" decimal="0" jt="12" />
+			<column name="Category Name" type="string" length="800" decimal="0" jt="12" />
+			<column name="Additional information" type="string" length="800" decimal="0" jt="12" />
+			<column name="Thumbnails" type="string" length="800" decimal="0" jt="12" />
+			<column name="Base Price" type="int" length="800" decimal="0" jt="4" />
+			<column name="Sell Price" type="int" length="800" decimal="0" jt="4" />
+			<column name="Tags" type="string" length="800" decimal="0" jt="12" />
+			<column name="Name" type="string" length="800" decimal="0" jt="12" />
+		</table>
+		<table name="Role_0" >
+			<column name="Slug" type="string" length="800" decimal="0" jt="12" />
+			<column name="Name" type="string" length="800" decimal="0" jt="12" />
+		</table>
+		<table name="Tags_0" >
+			<column name="Slug" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="Name" type="string" length="800" decimal="0" jt="12" />
+		</table>
+		<table name="Users_0" >
+			<comment><![CDATA[Daset]]></comment>
+			<column name="Role" type="string" length="800" decimal="0" jt="12" />
+			<column name="Email" type="string" length="800" decimal="0" jt="12" >
+				<comment><![CDATA[Mali]]></comment>
+			</column>
+			<column name="Profile Image" type="string" length="800" decimal="0" jt="12" />
+			<column name="First Name" type="string" length="800" decimal="0" jt="12" />
+			<column name="Last Name" type="string" length="800" decimal="0" jt="12" />
+		</table>
+	</schema>
+	<connector name="MongoDb" database="MongoDb" driver_class="com.dbschema.MongoJdbcDriver" driver_jar="mongojdbc3.1.jar" driver_desc="No Authentication" host="localhost" port="27017" instance="E_Commercedb" user="admin" />
+	<layout name="Main Layout" id="Layout_8b4" show_column_type="y" show_relation="name" >
+		<entity schema="E_Commercedb" name="Carts_0" color="BED3F4" x="256" y="304" />
+		<entity schema="E_Commercedb" name="Categories_0" color="BED3F4" x="480" y="304" />
+		<entity schema="E_Commercedb" name="Orders_0" color="BED3F4" x="480" y="544" />
+		<entity schema="E_Commercedb" name="Product_0" color="BED3F4" x="176" y="544" />
+		<entity schema="E_Commercedb" name="Role_0" color="BED3F4" x="48" y="368" />
+		<entity schema="E_Commercedb" name="Tags_0" color="BED3F4" x="48" y="128" />
+		<entity schema="E_Commercedb" name="Users_0" color="BED3F4" x="256" y="80" />
+		<callout x="256" y="192" pointer="Round" >
+			<comment><![CDATA[Double-click collection headers or fields to edit.
+Create multiple layouts (diagrams) with the same or different collections. 
+Saving the model to file will save also the layouts.]]></comment>
+		</callout>
+		<group name="Collection &#039;Carts_0&#039;" color="ECF0F7" >
+			<entity schema="E_Commercedb" name="Carts_0" />
+			<entity schema="E_Commercedb" name="Categories_0" />
+			<entity schema="E_Commercedb" name="Orders_0" />
+			<entity schema="E_Commercedb" name="Product_0" />
+			<entity schema="E_Commercedb" name="Role_0" />
+			<entity schema="E_Commercedb" name="Tags_0" />
+			<entity schema="E_Commercedb" name="Users_0" />
+		</group>
+	</layout>
+	<layout name="~Layout with Tools" id="Layout_264" show_column_type="y" show_relation="name" >
+		<entity schema="E_Commercedb" name="Carts_0" color="BED3F4" x="256" y="304" />
+		<entity schema="E_Commercedb" name="Categories_0" color="BED3F4" x="480" y="304" />
+		<entity schema="E_Commercedb" name="Orders_0" color="BED3F4" x="480" y="544" />
+		<entity schema="E_Commercedb" name="Product_0" color="BED3F4" x="176" y="544" />
+		<entity schema="E_Commercedb" name="Role_0" color="BED3F4" x="48" y="368" />
+		<entity schema="E_Commercedb" name="Tags_0" color="BED3F4" x="48" y="128" />
+		<entity schema="E_Commercedb" name="Users_0" color="BED3F4" x="256" y="80" />
+		<group name="Carts_0" color="ECF0F7" >
+			<entity schema="E_Commercedb" name="Carts_0" />
+			<entity schema="E_Commercedb" name="Categories_0" />
+			<entity schema="E_Commercedb" name="Orders_0" />
+			<entity schema="E_Commercedb" name="Product_0" />
+			<entity schema="E_Commercedb" name="Role_0" />
+			<entity schema="E_Commercedb" name="Tags_0" />
+			<entity schema="E_Commercedb" name="Users_0" />
+		</group>
+		<script name="Sample Query Editor" id="Editor_1978" language="SQL" >
+			<string><![CDATA[E_Commercedb.Carts_0.find()
+
+//OR
+
+USE E_Commercedb;
+db.Carts_0.find()
+
+//OR
+
+USE E_Commercedb;
+db.getCollection('Carts_0').find()]]></string>
+		</script>
+		<browser id="Browse_23e8" name="Sample Relational Data Explorer" confirm_updates="y" >
+			<browse_table schema="E_Commercedb" entity="Carts_0" x="20" y="20" width="400" height="300" record_view="y" />
+		</browser>
+		<query id="Query_a35" name="Sample Query Builder" >
+			<query_table schema="E_Commercedb" name="Carts_0" alias="Carts_0" x="48" y="48" >
+				<column name="Product_Qty" />
+				<column name="Sell_Price" />
+				<column name="Product" />
+				<column name="Base_Price" />
+				<column name="Users" />
+				<column name="Total_Price" />
+			</query_table>
+		</query>
+	</layout>
+</project>
